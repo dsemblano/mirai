@@ -10,6 +10,8 @@
 get_header(); ?>
 
 		<main id="main" class="site-main" role="main">
+		
+		<?php get_sidebar(); ?>
 
 		<?php if ( have_posts() ) : ?>
 
@@ -95,6 +97,5 @@ get_header(); ?>
 		<?php endif; ?>
 
 		</main><!-- #main -->
-
-<?php //get_sidebar(); ?>
+		
 <?php get_footer(); ?>

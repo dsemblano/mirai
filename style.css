@@ -248,8 +248,8 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-	border-color: #ccc #bbb #aaa #bbb;
-	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
+	/* border-color: #ccc #bbb #aaa #bbb;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02); */
 }
 button:focus,
 input[type="button"]:focus,
@@ -399,26 +399,31 @@ a:active {
 }
 
 
-/* =Menu
+/* =Menu e Header
 ----------------------------------------------- */
+.site-branding {
+	background-color: #FFFFFF;
+	border-bottom: 10px solid #D7D9D7;
+	padding: 5px 5px 0 0;
+	text-align: center;
+}
+
+.site-branding img {
+	width: 100%;
+}
 
 #masthead {
 	background-color: #EAEBEC;
 	min-height: 473px; /* 1366 x 768 */
 }
 
-.site-branding {
-	background-color: #FFFFFF;
-	border-bottom: 10px solid #D7D9D7;
-	padding: 10% 0 5% 10%;
-}
-
 .menu-mirai-container {
     /*background-color: #EAEBEC;*/
+	font-size: larger;
 }
 
 .menu-mirai-container #menu-mirai li {
-	padding: 5px 0;
+	padding: 10px 0;
 }
 
 
@@ -430,7 +435,7 @@ a:active {
 	background: #FFFFFF;
     border-bottom: 1px solid #CCCCCC;
     border-top: 1px solid #CCCCCC;
-	padding: 5px 0;
+	padding: 10px 0;
     width: 100%;
     z-index: 999999;
 }
@@ -448,9 +453,9 @@ a:active {
 #menu-mirai :hover:after {
 	border-color: rgba(255, 255, 255, 0);
 	border-left-color: #FFFFFF; 
-	border-width: 16px; 
+	border-width: 23px; 
 	top: 50%; 
-	margin-top: -16px;
+	margin-top: -23px;
 }
 #menu-mirai :hover:before {
 	/*border-color: rgba(204, 204, 204, 0);*/
@@ -567,9 +572,9 @@ a:active {
 }
 
 #main {
-	background-color: #008000 !important;
+	/* background-color: #000000; */
 	float: right;
-    min-height: 495px;
+	min-height: 495px;
 	width: 80%;
 }
 
@@ -825,9 +830,48 @@ footer#colophon .address span { display: inline-block; }
 	color: rgba(255,255,255,0.9);
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
 }
+
+main#main article {
+	/* background-color: #FFFF00; */
+	height: 555px;
+	margin: 15px 0 0 20px;
+	overflow: auto;
+}
+
+.entry-content {
+    margin: 0;
+}
+
+.entry-content p {
+	background-color: #F5F5F5;
+	float: left;
+	width: 50%;
+}
+
+.entry-content img {
+	margin-left: 15px;
+}
+
+/* Galeria Interna */
+.photospace {
+    background-color: rgba(0, 0, 0, 0) !important;
+	float: right;
+    margin: 0;
+	width: 48.5% !important;
+}
+
+.thumbs_wrap2 .thumnail_col  { background-color: inherit !important; width: 100% !important; margin-bottom: 15px; }
+
+.photospace .gal_content { float: left; }
+
+.photospace .gal_content, .photospace .loader, .photospace .slideshow a.advance-link { width: 100% !important; }
+
 /* END Efeito Galeria */
 
 /* Contato */
+
+.wpcf7 { width: 60%; }
+
 .wpcf7 p { margin: 0; }
 
 .wpcf7 input, 
@@ -887,7 +931,7 @@ footer#colophon .address span { display: inline-block; }
   
   color: #fff;
   
-  text-shadow: 1px -2px 0px black;
+  /* text-shadow: 1px -2px 0px black; */
   
   text-transform: uppercase;
   
@@ -901,32 +945,31 @@ footer#colophon .address span { display: inline-block; }
   padding-bottom: 10px;
   padding-left: 35px;
   padding-right: 35px;
+  margin-top: 10px;
   
   /* Gradient background */
-  background-color: #000000;
-  background: -webkit-gradient(linear, left top, left bottom, from(#4d1b5c), to(#000000));  
-  background:  -moz-linear-gradient(top, #4d1b5c, #000000);  
-  filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#4d1b5c', endColorstr='#000000');
-  -ms-filter: &quot;progid:DXImageTransform.Microsoft.gradient(startColorstr=#4d1b5c, endColorstr=#000000)&quot;;
+  background-color: #77CBC6;
+  background: -webkit-gradient(linear, left top, left bottom, from(#77CBC6), to(#77CBC6));  
+  background:  -moz-linear-gradient(top, #77CBC6, #77CBC6);  
+  filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#77CBC6', endColorstr='#77CBC6');
+  -ms-filter: &quot;progid:DXImageTransform.Microsoft.gradient(startColorstr=#77CBC6, endColorstr=#77CBC6)&quot;;
   
   /* Drop Shadow */
   -webkit-box-shadow: 0 2px 5px rgba(0,0,0,0.3);
   -moz-box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-  
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);  
 }
 
 /* On hover */
 .wpcf7 input.wpcf7-submit:hover{
   
   cursor: pointer;
-  text-decoration: none;
-  
+  text-decoration: none;  
   background-color: #000000;
-  background: -webkit-gradient(linear, left top, left bottom, from(#4d1b5c), to(#6d2f80));  
-  background:  -moz-linear-gradient(top, #4d1b5c, #6d2f80);  
-  filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#4d1b5c', endColorstr='#6d2f80');
-  -ms-filter: &quot;progid:DXImageTransform.Microsoft.gradient(startColorstr=#4d1b5c, endColorstr=#6d2f80)&quot;; 
+  background: -webkit-gradient(linear, left top, left bottom, from(#6DBCB7), to(#6DBCB7));  
+  background:  -moz-linear-gradient(top, #6DBCB7, #6DBCB7);  
+  filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#6DBCB7', endColorstr='#6DBCB7');
+  -ms-filter: &quot;progid:DXImageTransform.Microsoft.gradient(startColorstr=#6DBCB7, endColorstr=#6DBCB7)&quot;; 
 }
 
 /* On click */
@@ -1022,6 +1065,8 @@ footer#colophon .address span { display: inline-block; }
 	display: none;
 }
 
+.grafitti { background-color: #008000; padding-top: 65px; }
+
 
 /* =Media
 ----------------------------------------------- */
@@ -1108,7 +1153,7 @@ object {
 ----------------------------------------------- */
 
 .widget {
-	margin: 0 0 1.5em;
+	/* margin: 0 0 1.5em; */
 }
 
 /* Make sure select elements fit in widgets */
