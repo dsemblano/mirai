@@ -130,8 +130,27 @@ function cc_mime_types( $mimes ){
 }
 add_filter( 'upload_mimes', 'cc_mime_types' );
 
+/* Desabilitando link de imagem */
+add_filter( 'the_content', 'attachment_image_link_remove_filter' );
+function attachment_image_link_remove_filter( $content ) {
+ $content =
+ preg_replace(
+ array('{<a(.*?)(wp-att|wp-content/uploads)[^>]*><img}',
+ '{ wp-image-[0-9]*" /></a>}'),
+ array('<img','" />'),
+ $content
+ );
+ return $content;
+ }
+
 /* Tirar a tag p das imagens do the_content */
 function filter_ptags_on_images($content){
     return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
 }
 add_filter('the_content', 'filter_ptags_on_images');
+
+/* Wrap images the_content */
+function filter_images($content){
+    return preg_replace('/<img (.*) \/>\s*/iU', '<figure><img \1 /></figure>', $content);
+}
+add_filter('the_content', 'filter_images');

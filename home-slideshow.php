@@ -20,9 +20,9 @@
 	</div>
 	
 	<div id="gallery_down" class="flex-container">
-		<div id="clientes" class="flex-item">
+		<div id="curtimos" class="flex-item">
 			<a href="<?php echo ($page->guid); ?>">			
-		<?php $page = get_page_by_title( 'Clientes' ); ?>
+		<?php $page = get_page_by_title( 'Curtimos' ); ?>
 				<?php echo get_the_post_thumbnail( $page->ID, 'gallery_down' ); ?>
 				<div><span><?php echo ($page->post_title); ?></div></span>
 			</a>

@@ -326,6 +326,19 @@ a:active {
 	/* color: midnightblue; */
 }
 
+/* Typography */
+@font-face {
+    font-family: 'calibriregular';
+    src: url('fonts/calibri-webfont.eot');
+    src: url('fonts/calibri-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/calibri-webfont.woff') format('woff'),
+         url('fonts/calibri-webfont.ttf') format('truetype'),
+         url('fonts/calibri-webfont.svg#calibriregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 /* Alignment */
 .alignleft {
 	display: inline;
@@ -403,7 +416,7 @@ a:active {
 ----------------------------------------------- */
 .site-branding {
 	background-color: #FFFFFF;
-	border-bottom: 10px solid #D7D9D7;
+	/* border-bottom: 10px solid #D7D9D7; */
 	padding: 5px 5px 0 0;
 	text-align: center;
 }
@@ -413,8 +426,8 @@ a:active {
 }
 
 #masthead {
-	background-color: #EAEBEC;
-	min-height: 473px; /* 1366 x 768 */
+	background-color: #E8E55F;
+	min-height: 401px; /* 1366 x 768 */
 }
 
 .menu-mirai-container {
@@ -431,10 +444,10 @@ a:active {
 	position: relative;
 }
 
-#menu-mirai li:hover {
-	background: #FFFFFF;
-    border-bottom: 1px solid #CCCCCC;
-    border-top: 1px solid #CCCCCC;
+#menu-mirai li:hover, .current-menu-item {
+	background: #F7F7F7;
+    /* border-bottom: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC; */
 	padding: 10px 0;
     width: 100%;
     z-index: 999999;
@@ -452,7 +465,7 @@ a:active {
 
 #menu-mirai :hover:after {
 	border-color: rgba(255, 255, 255, 0);
-	border-left-color: #FFFFFF; 
+	border-left-color: #F7F7F7; 
 	border-width: 23px; 
 	top: 50%; 
 	margin-top: -23px;
@@ -481,7 +494,7 @@ a:active {
 .main-navigation ul {
 	margin: 0;
 	padding-left: 0;
-	font-family: Open Sans,Arial;
+	font-family: calibriregular,Open Sans;
 }
 .main-navigation li {
 	position: relative;
@@ -574,17 +587,18 @@ a:active {
 #main {
 	/* background-color: #000000; */
 	float: right;
-	min-height: 495px;
+	/* min-height: 495px; */
 	width: 80%;
 }
 
 .page  {
     /*background-color: #8A2BE2;*/
-	font-family: Open Sans;
+	font-family: calibriregular,open sans;
 }
 
 footer#colophon {
-	background-color: #77CBC6;
+	background-color: #F2B44F;
+	min-height: 282px;
 	/*height: 160px;*/
 }
 
@@ -638,6 +652,7 @@ footer#colophon .address {
 footer#colophon .address span { display: inline-block; }
 
 /* Flex Home Fotos */
+
 .flex-container {
     display: -webkit-box;
     display: -moz-box;
@@ -651,9 +666,9 @@ footer#colophon .address span { display: inline-block; }
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
     -webkit-box-pack: justify;
     -moz-box-pack: justify;
     -webkit-justify-content: space-between;
@@ -668,53 +683,55 @@ footer#colophon .address span { display: inline-block; }
     -ms-flex-align: stretch;
     align-items: stretch;
     }
+	
+.flex-item-portifolio { }
 
 .flex-item:nth-child(1) {
-    -webkit-box-ordinal-group: 1;
-    -moz-box-ordinal-group: 1;
-    -webkit-order: 0;
-    -ms-flex-order: 0;
-    order: 0;
+    -webkit-box-ordinal-group: 2;
+    -moz-box-ordinal-group: 2;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
     -webkit-box-flex: 1;
     -moz-box-flex: 1;
     -webkit-flex: 1 1 auto;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
-    -webkit-align-self: stretch;
-    -ms-flex-item-align: stretch;
-    align-self: stretch;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
     }
 
 .flex-item:nth-child(2) {
-    -webkit-box-ordinal-group: 1;
-    -moz-box-ordinal-group: 1;
-    -webkit-order: 0;
-    -ms-flex-order: 0;
-    order: 0;
+    -webkit-box-ordinal-group: 3;
+    -moz-box-ordinal-group: 3;
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
     -webkit-box-flex: 1;
     -moz-box-flex: 1;
     -webkit-flex: 1 1 auto;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
-    -webkit-align-self: stretch;
-    -ms-flex-item-align: stretch;
-    align-self: stretch;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
     }
 
 .flex-item:nth-child(3) {
-    -webkit-box-ordinal-group: 1;
-    -moz-box-ordinal-group: 1;
-    -webkit-order: 0;
-    -ms-flex-order: 0;
-    order: 0;
+    -webkit-box-ordinal-group: 4;
+    -moz-box-ordinal-group: 4;
+    -webkit-order: 3;
+    -ms-flex-order: 3;
+    order: 3;
     -webkit-box-flex: 1;
     -moz-box-flex: 1;
     -webkit-flex: 1 1 auto;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
-    -webkit-align-self: stretch;
-    -ms-flex-item-align: stretch;
-    align-self: stretch;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
     }
 
 /*
@@ -730,8 +747,29 @@ footer#colophon .address span { display: inline-block; }
 
 }
 
+/*  Flex Portifolio */
+/* Flex Home Fotos */
+
+.flex-item-portifolio {
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+	display: inline-block;
+	width: 50%;
+}
+
 /* Efeito Galeria */
-.da-thumbs  a div {
+.da-thumbs a div {
 	top: 0px;
 	left: -100%;
 	-webkit-transition: all 0.3s ease;
@@ -740,6 +778,7 @@ footer#colophon .address span { display: inline-block; }
 	-ms-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 }
+
 .da-thumbs  a:hover div{
 	left: 0px;
 }
@@ -774,34 +813,6 @@ footer#colophon .address span { display: inline-block; }
 	width: 100%;
 }
 
-.da-thumbs #clientes div {
-	background: none repeat scroll 0 0 #6082B6;
-}
-
-.da-thumbs #galeria div {
-	background: none repeat scroll 0 0 #009874;
-}
-
-.da-thumbs #equipe div  {
-	background: none repeat scroll 0 0 #FFC40C;
-}
-
-.da-thumbs #home_right_equipe a div {
-	background: none repeat scroll 0 0 #E9B51F;
-}
-
-.da-thumbs #contato div {
-	background: none repeat scroll 0 0 #645452;
-}
-
-.da-thumbs #empresa div {
-	background: none repeat scroll 0 0 #EC4908;
-}
-
-.da-thumbs #portifolio div {
-	background: none repeat scroll 0 0 #801818;
-}
-
 .da-thumbs .gallery_img a div span {
   color: rgba(255, 255, 255, 0.9);
   display: block;
@@ -814,7 +825,8 @@ footer#colophon .address span { display: inline-block; }
 
 .da-thumbs #gallery_up div span {
 	font-size: 1.5em;
-	margin: 35% 0 0 35%;
+	margin: 30% 0 0;
+	text-align: center;
 }
 
 .da-thumbs #gallery_down div span {
@@ -831,11 +843,56 @@ footer#colophon .address span { display: inline-block; }
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
 }
 
+#da-thumbs-portifolio a, #da-thumbs-portifolio a img { height: 145px; }
+
+#da-thumbs-portifolio  div span {
+	font-size: larger;
+	margin: 10% 0 0 0;
+	text-align: center;
+}
+
+/* Classes */
+#da-thumbs #empresa div, #da-thumbs-portifolio #web {
+	background: none repeat scroll 0 0 #EC4908;
+}
+
+#da-thumbs #portifolio div, #da-thumbs-portifolio #livros-paradidaticos {
+	background: none repeat scroll 0 0 #801818;
+}
+
+#da-thumbs #curtimos div, #da-thumbs-portifolio #projetos-especiais {
+	background: none repeat scroll 0 0 #6082B6;
+}
+
+#da-thumbs #equipe div, #da-thumbs-portifolio #livros-didaticos  {
+	background: none repeat scroll 0 0 #FFC40C;
+}
+
+#da-thumbs #contato div, #da-thumbs-portifolio #videos {
+	background: none repeat scroll 0 0 #009874;
+}
+
+#da-thumbs-portifolio #impressos-editoriais {
+	background: none repeat scroll 0 0 #EC4908;
+}
+
+#da-thumbs-portifolio #veiculos-line {
+	background: none repeat scroll 0 0 #801818;
+}
+
+#da-thumbs-portifolio #marcas {
+	background: none repeat scroll 0 0 #6082B6;
+}
+
+#da-thumbs-portifolio div:hover {
+    background-color: #CCCCCC;
+}
+
 main#main article {
 	/* background-color: #FFFF00; */
 	height: 555px;
 	margin: 15px 0 0 20px;
-	overflow: auto;
+	/* overflow: auto; */
 }
 
 .entry-content {
@@ -843,13 +900,16 @@ main#main article {
 }
 
 .entry-content p {
-	background-color: #F5F5F5;
+	/* background-color: #F5F5F5; */
 	float: left;
+	margin: 5px 0 10px;
 	width: 50%;
 }
 
-.entry-content img {
-	margin-left: 15px;
+.entry-content figure {
+	float: right;
+	/* margin-left: 15px; */
+	width: 50%;
 }
 
 /* Galeria Interna */
